@@ -1,0 +1,10 @@
+composer install
+.env configuration
+
+
+storage acess 
+    RUN chown -R www-data:www-data /var/www/html/storage
+    RUN chown -R www-data:www-data /var/www/html
+    RUN chown -R www-data:www-data /var/www/html/bootstrap/cache
+    RUN chmod -R 755 /var/www/html/storage
+    RUN chmod -R 755 /var/www/html/bootstrap/cache
