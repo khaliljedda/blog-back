@@ -1,12 +1,19 @@
 version: '3.7'
 services: 
   app:
-
-    image: 'testback6'
+    image: 'blogback'
     ports:
       - 8000:80
     volumes:
       - ./:/var/www/html
+    environment:
+      DB_HOST: db
+      DB_DATABASE: blog
+      DB_USERNAME: root
+      DB_PASSWORD: 
+
+
+
   db:
     image: mysql:5.7
     restart: always
