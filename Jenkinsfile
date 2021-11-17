@@ -7,7 +7,7 @@ pipeline {
     }}
         stage('Docker Build and Tag') {
             steps {
-                sh 'docker build -t blogback:V1 .'
+                sh 'docker build -t blogback .'
                 sh 'docker tag blogback khalil4/blogback:V1'
             }
         }
